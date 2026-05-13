@@ -1,0 +1,22 @@
+/* Fonts */
+
+/* Général */
+*{
+    margin: 0;
+}
+
+:root{
+    --cyan:rgba(2, 121, 126, 1);
+    --green:rgba(0, 106, 25, 1);
+    --grey:rgba(242, 244, 242, 1);
+    --titlefont:"Permanent marker", sans-serif;
+    --linkfont:"Roboto", sans-serif;
+    --primaryfont:Open sans, sans-serif;
+}
+
+/* Desktop */
+/* Header */
+
+header{
+    display: flex;
+}

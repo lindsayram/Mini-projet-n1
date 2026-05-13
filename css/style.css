@@ -1,6 +1,9 @@
 /* Fonts */
 
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Permanent+Marker&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
 /* Général */
+
 *{
     margin: 0;
 }
@@ -11,7 +14,17 @@
     --grey:rgba(242, 244, 242, 1);
     --titlefont:"Permanent marker", sans-serif;
     --linkfont:"Roboto", sans-serif;
-    --primaryfont:Open sans, sans-serif;
+    --primaryfont:"Open sans", sans-serif;
+}
+
+a{
+    text-decoration: none;
+}
+
+p{
+    font-family: var(--primaryfont);
+    font-size: 16px;
+    font-weight: 400;
 }
 
 /* Desktop */
@@ -19,4 +32,47 @@
 
 header{
     display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 1440px;
+    margin: auto;
+
+    a{
+        img{
+            height: 200px;
+            object-fit: contain;
+        }
+    }
+
+    nav{
+        ul{
+            display: flex;
+            gap: 40px;
+
+            li{
+                list-style: none;
+
+                #page-principale{
+                    color: var(--green);
+                    font-weight: 600;
+                    font-family: var(--linkfont);
+                    font-size: 16px;
+                }
+
+                .others{
+                    color: black;
+                    font-family: var(--linkfont);
+                    font-size: 16px;
+                    font-weight: 600;
+                }
+            }
+        }
+    }
+}
+
+/* Footer */
+
+footer{
+    text-align: center;
+    color: var(--cyan);
 }

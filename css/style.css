@@ -111,6 +111,7 @@ main{
 
     #about-us{
         background-color: var(--grey);
+        padding: 0 20px;
 
         .container{
             display: grid;
@@ -133,7 +134,8 @@ main{
             }
 
             img{
-                height: 700px;
+                width: 100%;
+                /* height: auto; */
                 margin: 30px 0;
             }
         }
@@ -177,7 +179,7 @@ main{
 
     #our-clients{
         background-color: var(--cyan);
-        padding: 50px 0;
+        padding: 50px 20px;
 
         .container{
             h2{
@@ -236,16 +238,16 @@ main{
             align-items: center;
             max-width: 1140px;
             margin: auto;
-            padding: 50px 0;
+            padding: 50px 20px;
             gap: 100px;
 
-            article{
+            >div{
                 display: grid;
                 gap: 30px;
 
                 #contact{
                     p{
-                        margin: 5px 0;
+                        margin: 10px 0;
 
                         i{
                             color: var(--green);
@@ -287,3 +289,56 @@ footer{
     color: var(--cyan);
     padding: 26px 0;
 }
+
+/* Format tablette (dès 768px) */
+
+@media screen and (max-width: 768px) {
+
+    main{
+        #about-us{
+            .container{
+                grid-template-columns: 1fr;
+                margin: auto;
+            }
+        }
+
+        #our-clients{
+            .container{
+                width: fit-content;
+
+                div{
+                    grid-template-columns: 1fr 1fr;
+                }
+            }
+        }
+
+        #our-projects{
+            .cards{
+                grid-template-columns: 1fr;
+            }
+        }
+
+        #contact-us{
+            .container{
+                .content{
+                    flex-wrap: wrap;
+                    gap: 70px;
+
+                    >div{
+                        width: 82%;
+                    }
+
+                    form{
+                        gap: 13px;
+
+                        a{
+                            margin-top: 10px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+/* Format mobile (dès 320px) */
